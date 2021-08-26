@@ -1,11 +1,11 @@
-import { combinedReducers } from 'redux'
-import { autheduser } from '../Reducers/authedUser'
-import { tweets } from '../Reducers/tweets'
-import { users } from '../Reducers/users'
+import { combineReducers } from 'redux'
+import authedUser from '../Reducers/authedUser'
+import tweets from '../Reducers/tweets'
+import users from '../Reducers/users'
 
 
-export default combinedReducers({
-    authedUser: autheduser,
+export default combineReducers({
+    authedUser: authedUser,
     tweets:tweets,
     users:users
 })
