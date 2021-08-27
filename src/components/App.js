@@ -12,10 +12,20 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Dashboard/>
+        {
+          this.props.loading === true ? null : <Dashboard/>
+        }
+        
       </div>
     )
   }
 }
+
+function mapStateToProps({authedUser}){
+  return{
+    loading: authedUser == null
+  }
+}
+
 
 export default connect()(App)
