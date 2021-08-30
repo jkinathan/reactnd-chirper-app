@@ -5,9 +5,15 @@ import { formatTweet } from '../utils/helpers'
 export class Tweets extends Component {
     
     render() {
+
+        const {tweet} = this.props
+
+        if(tweet === null ){
+            return <p>This Tweet does not exist</p>
+        }
         
         return (
-            <div className={tweet}>
+            <div className='tweet'>
                 
             </div>
         )
